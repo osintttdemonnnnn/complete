@@ -1,4 +1,4 @@
-const $=s=>document.querySelector(s);
+const $=s=>document.querySelector(s); 
 const store={get(k,d){try{return JSON.parse(localStorage.getItem("og_"+k))??d}catch{return d}},set(k,v){localStorage.setItem("og_"+k,JSON.stringify(v))}};
 let state={cases:store.get("cases",[]),activeCase:store.get("activeCase",null),recent:store.get("recent",[]),searches:store.get("searches",[]),activity:store.get("activity",[])};
 const enc=encodeURIComponent;const proxy=u=>`https://api.allorigins.win/raw?url=${enc(u)}`;
